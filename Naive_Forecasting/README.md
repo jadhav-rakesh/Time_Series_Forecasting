@@ -1,12 +1,10 @@
 <project>
     <title>Naive Prediction</title>
-
     <overview>
         This repository contains a Jupyter Notebook, <file>naive_prediction.ipynb</file>, 
         that implements a simple naive prediction model. The purpose of this notebook 
         is to demonstrate a basic approach to making predictions with minimal assumptions.
     </overview>
-
      <images>
         <image>
             <title>Data</title>
