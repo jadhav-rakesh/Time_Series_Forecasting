@@ -1,8 +1,6 @@
 # Time_Series_Forecasting
 
 ---
-# ============================================
-***
 
 # Naive Prediction
 
@@ -37,9 +35,9 @@ Baseline models are evaluated using **Mean Absolute Percentage Error (MAPE)** to
 
 ![Comparison of Baseline Models](Naive_Forecasting/ts6.png)
 
+---
 
-
-# Understanding the Random Walk Process
+# Random Walk Process
 
 A **random walk** is a stochastic process where there is an equal probability of moving up or down by a random value. It is a fundamental concept in time series analysis and plays a significant role in financial markets and econometrics. A random walk is characterized by its first difference being stationary and uncorrelated.
 
@@ -114,3 +112,5 @@ Common forecasting approaches include:
 The **Mean Squared Error (MSE)** quantifies the accuracy of different forecasting methods.
 
 ![MSE Squared Loss](Random_Walk/ts15.png)
+
+---
