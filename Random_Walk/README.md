@@ -46,3 +46,5 @@ The **Augmented Dickey-Fuller (ADF) test** helps determine if a time series is s
 The **drift method** for forecasting uses:
 
 \[ \text{forecast} = \text{drift} \times \text{timestep} \]
+
+Where **drift** is the average rate of change over time.
