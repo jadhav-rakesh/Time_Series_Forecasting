@@ -1,59 +1,75 @@
-# Random Walk Process
+# Understanding the Random Walk Process
 
-A **random walk** is a process in which there is an equal chance of moving up or down by a random number. A random walk is a series whose first difference is stationary and uncorrelated.
+A **random walk** is a stochastic process where there is an equal probability of moving up or down by a random value. It is a fundamental concept in time series analysis and plays a significant role in financial markets and econometrics. A random walk is characterized by its first difference being stationary and uncorrelated.
 
 ![Random Walk Process](ts1.png)
 
-## Stationary vs Non-Stationary
-A **stationary** time series is one whose statistical properties do not change over time. It has:
-- Constant mean
-- Constant variance
-- Constant autocorrelation (independent of time)
+## Stationarity in Time Series: Stationary vs. Non-Stationary Data
+A **stationary time series** exhibits statistical properties that remain constant over time. Key characteristics include:
+- **Constant mean**: The average value does not change over time.
+- **Constant variance**: The fluctuations around the mean remain stable.
+- **Constant autocorrelation**: The correlation between lagged values remains unchanged over time.
 
-### Differencing
-**Differencing** is a transformation that calculates the change from one timestep to another:
+### Differencing: A Technique for Achieving Stationarity
+To convert a non-stationary time series into a stationary one, **differencing** is applied. This technique measures the change between consecutive time steps:
 
 \[ y'(t) = y(t) - y(t-1) \]
 
-- **First-order differencing:** Taking the difference once.
-- **Second-order differencing:** Taking the difference twice.
+- **First-order differencing**: Computing the difference once.
+- **Second-order differencing**: Computing the difference twice to remove more complex trends.
 
 ![Stationary vs Non-Stationary](ts2.png)
 
-### 2.1 Mean Graph of Stationary vs Non-Stationary
+### Mean Behavior in Stationary vs. Non-Stationary Series
 ![Mean Graph](ts3.png)
 
-### 2.2 Variance of Stationary vs Non-Stationary
+### Variance in Stationary vs. Non-Stationary Series
 ![Variance Graph](ts4.png)
 
-## The Autocorrelation Function
-- **Correlation** measures the extent of a linear relationship between two variables.
-- **Autocorrelation** measures the linear relationship between lagged values of a time series.
-- **Lag** refers to the number of timesteps separating two values.
-- **ACF plot**: 
-  - In a trending series, ACF coefficients decrease linearly with increasing lag.
-  - In a seasonal series, ACF shows periodic patterns.
+## The Autocorrelation Function (ACF)
+- **Correlation** measures the strength of a linear relationship between two variables.
+- **Autocorrelation** quantifies the relationship between lagged values within a time series.
+- **Lag** refers to the number of time steps separating two observations.
+- **ACF Interpretation**:
+  - In a trending series, ACF values decrease linearly as lag increases.
+  - In a seasonal series, ACF exhibits repeating cyclical patterns.
 
 ![Autocorrelation Function](ts5.png)
 
-## Differenced Random Walk
+## Impact of Differencing on a Random Walk
+Differencing helps eliminate trends, making a series stationary.
+
 ![Differenced Random Walk](ts6.png)
 
-## Autocorrelation for Above
+## Autocorrelation of a Differenced Random Walk
+After differencing, the autocorrelation behavior of the series changes significantly.
+
 ![Autocorrelation for Differenced Random Walk](ts7.png)
 
-## Google Stock Price Dataset
+## Case Study: Google Stock Price Dataset
+Analyzing stock prices often reveals a random walk behavior, making forecasting a challenging task.
+
 ![Google Stock Price Dataset](ts8.png)
 
-## Autocorrelation of the First Difference of Dataset
+## Autocorrelation Analysis of the First-Differenced Dataset
+The autocorrelation function after differencing helps determine whether the series has become stationary.
+
 ![Autocorrelation of First Difference](ts9.png)
 
-## Train and Test Set
+## Splitting the Data: Train and Test Sets
+For predictive modeling, the dataset is divided into training and testing sets.
+
 ![Train and Test Set](ts10.png)
 
-## Prediction Using Mean, Last Value, and Drift Method
+## Forecasting Techniques: Mean, Last Value, and Drift Method
+Common forecasting approaches include:
+- **Mean method**: Predicting future values based on the historical mean.
+- **Last value method**: Assuming the most recent observation persists.
+- **Drift method**: Accounting for trends over time.
+
 ![Prediction Methods](ts14.png)
 
-## MSE Squared Loss of Above Methods
-![MSE Squared Loss](ts15.png)
+## Evaluating Forecast Performance: Mean Squared Error (MSE)
+The **Mean Squared Error (MSE)** quantifies the accuracy of different forecasting methods.
 
+![MSE Squared Loss](ts15.png)
