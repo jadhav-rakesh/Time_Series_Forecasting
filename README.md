@@ -1,4 +1,40 @@
 # Time_Series_Forecasting
+
+# Naive Prediction
+
+## Dataset
+The dataset spans from **1960 to 1979**, and the goal is to predict the **EPS (Earnings Per Share) for the four quarters of 1980**.
+
+![Dataset](Naive_Forecasting/ts1.png)
+
+## Forecasting Models
+### 1. Historical Mean Forecast
+This method predicts future values using the average of past observations.
+
+![Historical Mean Forecast](Naive_Forecasting/ts2.png)
+
+### 2. Last Year's Mean Forecast
+This approach uses the mean of the most recent year's data for prediction.
+
+![Last Year's Mean Forecast](Naive_Forecasting/ts3.png)
+
+### 3. Last Known Value Forecast
+This technique assumes that the most recent observed value will persist into the future.
+
+![Last Known Value Forecast](Naive_Forecasting/ts4.png)
+
+### 4. Naive Seasonal Forecast
+Predicts future values by repeating the observations from the corresponding period in the previous season.
+
+![Naive Seasonal Forecast](Naive_Forecasting/ts5.png)
+
+## Model Evaluation: Comparing Forecasting Methods
+Baseline models are evaluated using **Mean Absolute Percentage Error (MAPE)** to measure prediction accuracy.
+
+![Comparison of Baseline Models](Naive_Forecasting/ts6.png)
+
+
+
 # Understanding the Random Walk Process
 
 A **random walk** is a stochastic process where there is an equal probability of moving up or down by a random value. It is a fundamental concept in time series analysis and plays a significant role in financial markets and econometrics. A random walk is characterized by its first difference being stationary and uncorrelated.
