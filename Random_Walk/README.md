@@ -1,4 +1,4 @@
-# Understanding the Random Walk Process
+#Random Walk Process
 
 A **random walk** is a stochastic process where there is an equal probability of moving up or down by a random value. It is a fundamental concept in time series analysis and plays a significant role in financial markets and econometrics. A random walk is characterized by its first difference being stationary and uncorrelated.
 
